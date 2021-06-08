@@ -13,8 +13,8 @@ class interfazPrincipal extends Controller
      */
     public function index(Request $request)
     {
-        $interfaz = Interfaz::all();
-        return view('views.vista', compact('interfaz'));
+        
+        return view('interfaces.vista');
     }
 
     /**
