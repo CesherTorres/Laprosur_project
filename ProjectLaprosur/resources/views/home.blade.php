@@ -10,11 +10,11 @@
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                            <p> Bienvenido</p>
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <a href="/ladrillos" class="btn btn-primary" id="lista_productos">Vista</a>
                 </div>
             </div>
         </div>
