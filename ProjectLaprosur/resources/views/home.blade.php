@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="content">
-                <div class="card-header">HOLA</div>
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,11 +14,7 @@
                         </div>
                     @endif
 
-                    !!GENIAL, HAS INICIADO SESION!!
-                </div>
-                <br>
-                <div class="links, row justify-content-center">
-                    <a href="/ladrillos" class="btn btn-primary" id="lista_productos">Productos</a>
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
