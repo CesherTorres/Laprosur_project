@@ -9,9 +9,9 @@
     <div class="container col-8">
         <div class="card">
             <div class="card-body">
-                <h1 align="center">AVANCE QUEMA</h1>
+                <h1 align="center">Saca de Ladrillo</h1>
                 <div align="right">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <label>Fecha</label>
                         <div class="input-group">
                             <input type="date" name="fecha" value="{{$now->format('Y-m-d')}}" class="form-control">
