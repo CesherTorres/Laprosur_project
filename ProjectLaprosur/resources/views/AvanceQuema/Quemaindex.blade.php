@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 @section('content')
 
-    <div class="container col-12">
+    <div class="container col-10">
         <div class="card">
             <div class="card-body">
                 <h1 align="center">AVANCE QUEMA</h1>
@@ -96,7 +96,7 @@
                             <hr size="2px" width="100%" noshade="noshade" align="right" />
                             <br>
 
-                             <table id="Pindex" class="table table-striped table-bordered shadow-lg mt-4" cellspacing="0" style="width:100%">
+                            <table id="Pindex" class="table table-striped table-bordered shadow-lg mt-4" cellspacing="0" style="width:100%">
                                     <thead class="bg-dark text-white">
                                         <tr>                                        
                                             <th>REGISTRO</th>
@@ -131,7 +131,7 @@
                                      
                                 </tbody>
                                
-                    </table>
+                            </table>
 
                             <div class="box-footer" align="center">
                                 <button type="submit" class="btn btn-success pull-right "><i class="fa fa-floppy-o"></i> GUARDAR</button>
@@ -139,12 +139,7 @@
                         </div>
                                              
                     </form>
-                </div>
-                
-                
-
-                
-                   
+                </div>   
             </div><!--./card-body-->
         </div><!--./card-->
     </div>

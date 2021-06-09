@@ -1,16 +1,15 @@
-@include('layouts.header')
 @extends('layouts.plantilla')
 @section('title','Index')
 @section('content')
-
+    
 @endsection 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 @section('content')
 
-    <div class="container col-10">
+    <div class="container col-8">
         <div class="card">
             <div class="card-body">
-                <h1 align="center">SACA DE LADRILLO</h1>
+                <h1 align="center">CONTROL LADRILLO COCIDO</h1>
                 <div align="right">
                     <div class="col-md-3">
                         <label>Fecha</label>
@@ -26,12 +25,12 @@
                     </div>
                     <form method="post" name="new_purchase" id="new_purchase" action="/compras">
                          @csrf
-                         <label>Saca de Ladrillos</label>
+                         <label>Despacho Ladrillos</label>
                         <hr size="2px" width="100%" noshade="noshade" align="right" />
                             <div class="col-auto p-5 text-center">
 
                                 <div class="col-md-12">
-                                    <label for="">Horno </label>
+                                    <label for="">Tipo de Ladrillo </label>
                                     <select class="custom-select col-4" name="ncachamada" id="ncachamadas">
                                     <option value="">-- Seleccione Horno --</option>
                                             <option value="">1</option>
@@ -43,28 +42,14 @@
                                 <br>
                                 <div align="center">
                                     <div class="col-md-6">
-                                            <div class="input-group col-7">
+                                            <div class="input-group col-12">
                                                 <label>Cantidad</label>
                                                 <div class="input-group-text">S/</div>
                                                 <input type="text" class="form-control"  id="pcompra"  value="">
                                             </div>
                                     </div>
                                 </div>
-                            </div>
-                            <hr size="2px" width="100%" noshade="noshade" align="right" />
-                            <div class="col-auto p-5 text-center">
-
-                                <div class="col-md-12">
-                                    <label for="">Horno </label>
-                                    <select class="custom-select col-4" name="ncachamada" id="ncachamadas">
-                                    <option value="">-- Seleccione Horno --</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                    
-                                    </select>
-                                </div>
-                                <br>
+                                <br> 
                                 <div class="col-md-12">
                                     <label for="">Quema </label>
                                     <select class="custom-select col-4" name="ncachamada" id="ncachamadas">
@@ -77,28 +62,29 @@
                                 </div>
                                 <br>
                                 <div class="col-md-12">
-                                    <label for=""># Cachamada </label>
+                                    <label for="">Pampa </label>
                                     <select class="custom-select col-4" name="ncachamada" id="ncachamadas">
-                                    <option value="">-- Seleccione Tipo --</option>
+                                    <option value="">-- Seleccione Pampa --</option>
                                             <option value="">1</option>
                                             <option value="">2</option>
                                             <option value="">3</option>
                     
                                     </select>
                                 </div>
-                                
+                                <br>
+                                <div class="col-md-12">
+                                    <label for="">Placa </label>
+                                    <select class="custom-select col-4" name="ncachamada" id="ncachamadas">
+                                    <option value="">-- Seleccione Placa --</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                    
+                                    </select>
+                                </div>
                             </div>
-
-                            <hr size="2px" width="100%" noshade="noshade" align="right" />
-                            <br>
-
-                            <div align="center">
-                            <button type="button" class="btn btn-primary">REGISTRAR</button>
-                            <button type="button" class="btn btn-primary">CANCELAR</button>
-                            </div>
-                        </form>
-                        
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
+    </div>                   
