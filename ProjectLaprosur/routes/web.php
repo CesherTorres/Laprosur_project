@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\interfazPrincipal;
+use App\Http\Controllers\ProduccionCrudoController;
+use App\Models\ProduccionCrudo;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,15 +20,5 @@ use App\Http\Controllers\interfazPrincipal;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::apiResource('ladrillos', interfazPrincipal::class);
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('produccionCrudos', ProduccionCrudoController::class);

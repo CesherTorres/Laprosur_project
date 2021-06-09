@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10001,4 +10001,18 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+.container{
+  margin-top: 8%;
+  padding-top: 2%;
+  border: 2px solid #68c3df;
+  background:white;
+}
+body{
+  background:'C:\Users\ALEXANDER\Documents\Balsmiq\Imagenes\Fondo\laptop.png';
+  color:black;
+}
+h1{
+  font-weight: 900;
+  color: rgb(21, 180, 253);
 }
