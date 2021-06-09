@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\interfazPrincipal;
 use App\Http\Controllers\ProduccionCocidosController;
 use App\Http\Controllers\ProduccionCrudoController;
+use App\Http\Controllers\AvanceQuemaController;
+use App\Http\Controllers\SacaLadrilloController;
 use App\Models\ProduccionCrudo;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,3 +26,5 @@ Route::get('/', function () {
 
 Route::resource('produccionCrudos', ProduccionCrudoController::class);
 Route::resource('produccionCocidos', ProduccionCocidosController::class);
+Route::resource('Quema', AvanceQuemaController::class);
+Route::resource('Saca', SacaLadrilloController::class);
