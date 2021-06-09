@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\interfazPrincipal;
+use App\Http\Controllers\ProduccionCocidosController;
 use App\Http\Controllers\ProduccionCrudoController;
 use App\Models\ProduccionCrudo;
 use Illuminate\Support\Facades\Auth;
@@ -22,3 +23,4 @@ Route::get('/', function () {
 });
 
 Route::resource('produccionCrudos', ProduccionCrudoController::class);
+Route::resource('produccionCocidos', ProduccionCocidosController::class);

@@ -8,6 +8,7 @@
     <title>@yield('title')</title>
 </head>
 <body background="{{'../images/laptop.png'}}">
+    {{-- background="{{'../images/laptop.png'}}" --}}
     @yield('content')
 </body>
 </html>
