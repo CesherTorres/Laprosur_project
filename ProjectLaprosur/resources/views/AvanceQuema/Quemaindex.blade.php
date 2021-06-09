@@ -1,3 +1,4 @@
+@include('layouts.header')
 @extends('layouts.plantilla')
 @section('title','Index')
 @section('content')

@@ -1,7 +1,8 @@
+@include('layouts.header')
 @extends('layouts.plantilla')
 @section('title','Index')
 @section('content')
-    
+
 @endsection 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 @section('content')
