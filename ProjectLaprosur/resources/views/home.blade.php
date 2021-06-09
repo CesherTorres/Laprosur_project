@@ -14,9 +14,9 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <H4>BIENVENIDO AMIGOS</H4>
                 </div>
-                <a href="/ladrillos" class="btn btn-primary" id="lista_productos">ladrillos</a>
+                <a href="/ladrillos" class="btn btn-primary" id="lista_productos">Ingresar</a>
             </div>
         </div>
     </div>
