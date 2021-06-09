@@ -13,7 +13,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     <H4>BIENVENIDO AMIGOS</H4>
                 </div>
                 <a href="/ladrillos" class="btn btn-primary" id="lista_productos">Ingresar</a>
