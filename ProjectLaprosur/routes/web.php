@@ -7,7 +7,6 @@ use App\Http\Controllers\ProduccionCrudoController;
 use App\Http\Controllers\AvanceQuemaController;
 use App\Http\Controllers\SacaLadrilloController;
 use App\Http\Controllers\ControlladrilloController;
-
 use App\Models\ProduccionCrudo;
 use Illuminate\Support\Facades\Auth;
 
