@@ -111,12 +111,48 @@
                                 
                                 <tbody>
                                     <tr>                                        
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td> </td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>KK 18 ECONOMICO</td>
+                                        <td>30/06/2021</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>44</td>
+                                        <td>QUEMADO</td>
+                                        <td>
+                                            <form method="POST" action="">
+                                            @csrf
+                                            @method('DELETE')
+                                            <div class="text-center">
+                                                <a class="btn btn-warning" href="" role="button"><i class="fa fa-pencil"></i></a>
+                                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                            </div>
+                                            </form> 
+                                        </td>
+                                    </tr>
+                                    <tr>                                        
+                                        <td>KK 18 SIMPLE</td>
+                                        <td>30/06/2021</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>44</td>
+                                        <td>QUEMADO</td>
+                                        <td>
+                                            <form method="POST" action="">
+                                            @csrf
+                                            @method('DELETE')
+                                            <div class="text-center">
+                                                <a class="btn btn-warning" href="" role="button"><i class="fa fa-pencil"></i></a>
+                                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                            </div>
+                                            </form> 
+                                        </td>
+                                    </tr>
+                                    <tr>                                        
+                                        <td>TECHO 15X30X30</td>
+                                        <td>30/06/2021</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>44</td>
+                                        <td>QUEMADO</td>
                                         <td>
                                             <form method="POST" action="">
                                             @csrf

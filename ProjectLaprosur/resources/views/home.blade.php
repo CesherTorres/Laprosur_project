@@ -1,24 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.header')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+@section('title', 'LAPROSUR_MENU')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+@section('contenido')
 
-                    <p>HOLA</p>
-                </div>
-                <a href="/produccionCrudos" class="btn btn-primary" id="lista_productos">Productos</a>
-            </div>
+
+<!-- Content Header (Page header) -->
+        <div>
+
+                    <h1 class="m-0 text-dark">Bienvenido al sistema</h1>
+
+            
         </div>
-    </div>
-</div>
+
 @endsection
