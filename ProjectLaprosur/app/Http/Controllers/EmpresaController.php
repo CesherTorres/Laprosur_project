@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\EmpresaT;
 use Illuminate\Http\Request;
 
 class EmpresaController extends Controller
@@ -34,7 +34,12 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $empresaT = new EmpresaT();
+        $empresaT->businessName = $request->input('ntranporte');
+        $empresaT->Ruc = $request->input('ruc');
+        $empresaT->save();
+
+        return 'actualizado';
     }
 
     /**
