@@ -9,7 +9,7 @@
         <hr width=90%  align="center" style="background-color: black">
         <br>
         <div class="col-8">
-            <form action="">
+            <form method="POST" action="/produccionCrudos">
                 <div class="form-group row">
                     <br>
                     <div class="form-group col-12">

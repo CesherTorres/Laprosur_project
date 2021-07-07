@@ -14,35 +14,29 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-mainbg">
-
- <a class="navbar-brand navbar-logo" href="#"><img src="{{ 'images/logo.ico' }}" alt="Laprosur" class="brand-image " style="opacity: .8"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars text-white"></i>
-            </button>
-        <div class="d-flex flex-row-reverse collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/produccionCocidos"><i class="fa fa-tachometer"></i>Produccion Cocido</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Saca"><i class="fa fa-address-book"></i>Saca de Ladrillos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Quema"><i class="fa fa-clone"></i>Quema</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Control"><i class="fa fa-calendar"></i>Control de Cocido</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/produccionCrudos"><i class="fas fa-chart-bar"></i>Crudo Diario</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-copy"></i>Documents</a>
-                    </li>
-                    <div>
-                </ul>
-        </div>
+    <div id="accordian">
+        <a class="navbar-brand navbar-logo" href="#"><img src="{{ 'images/logo.ico' }}" alt="Laprosur" class="brand-image " style="opacity: .8"></a>
+            <br>
+            <br>
+            <ul class="show-dropdown main-navbar">
+                <div class="selector-active"><div class="top"></div><div class="bottom"></div></div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/produccionCocidos"><i class="fa fa-tachometer"></i>Produccion Cocido</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Saca"><i class="fa fa-address-book"></i>Saca de Ladrillos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Quema"><i class="fa fa-clone"></i>Quema</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Control"><i class="fa fa-calendar"></i>Control de Cocido</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/produccionCrudos" ><i class="fa fa-calendar"></i>Crudo Diario</a>
+                </li>
+            </ul>
+    </div>
 </nav>         
   <div class="content">
     @yield('contenido')

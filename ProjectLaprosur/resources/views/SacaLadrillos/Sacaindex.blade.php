@@ -32,7 +32,7 @@
 
                                 <div class="col-md-12">
                                     <label for="">Horno </label>
-                                    <select class="custom-select col-4" name="ncachamada" id="ncachamadas">
+                                    <select class="custom-select col-4" name="nHorno" id="ncachamadas">
                                     <option value="">-- Seleccione Horno --</option>
                                             <option value="">1</option>
                                             <option value="">2</option>
@@ -46,7 +46,7 @@
                                             <div class="input-group col-7">
                                                 <label>Cantidad</label>
                                                 <div class="input-group-text">S/</div>
-                                                <input type="text" class="form-control"  id="pcompra"  value="">
+                                                <input type="text" class="form-control"  name="cantidadS" id="pcompra"  value="">
                                             </div>
                                     </div>
                                 </div>
