@@ -40,8 +40,11 @@ Route::resource('Control', ControlladrilloController::class);
 Route::resource('tipoLadrillos', TipoLadrilloController::class);
 Route::resource('turnoProduccion', TurnoProduccionController::class);
 Route::resource('almacenCrudo', AlmacenCrudoController::class);
+
 Route::resource('empresas', EmpresaController::class);
 Route::resource('turnoQuema', TurnoQuemaController::class);
 Route::resource('cachamadas', CachamadaController::class);
 Route::resource('ingresosHorno', IngresosHornoController::class);
 Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

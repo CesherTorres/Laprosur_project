@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\TipoLadrillo;
 use Illuminate\Http\Request;
 
 class TipoLadrilloController extends Controller
@@ -13,7 +13,8 @@ class TipoLadrilloController extends Controller
      */
     public function index()
     {
-        return view('tipoLadrillos.index');
+        $TypeLadrillo= TipoLadrillo::all();
+        return view('tipoLadrillos.index',compact('TypeLadrillo'));
     }
 
     /**
@@ -34,7 +35,11 @@ class TipoLadrilloController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $TypeLadrillo = new TipoLadrillo();
+        $TypeLadrillo->name = $request->input('TypeLadrillo');
+        $TypeLadrillo->save();
+
+        return redirect('/tipoLadrillos');
     }
 
     /**
@@ -56,7 +61,8 @@ class TipoLadrilloController extends Controller
      */
     public function edit($id)
     {
-        //
+        $TypeLadrillo = TipoLadrillo::find($id);
+        return view('empresas.EditModal', compact('TypeLadrillo'));
     }
 
     /**
@@ -68,7 +74,12 @@ class TipoLadrilloController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $TypeLadrillo = TipoLadrillo::find($id);
+        $TypeLadrillo->update([
+            'name' => request('nameLadrillo'),
+           ]);
+        $TypeLadrillo->save();
+        return redirect()->route('tipoLadrillos.index');
     }
 
     /**
@@ -79,6 +90,8 @@ class TipoLadrilloController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $TypeLadrillo = TipoLadrillo::find($id);
+        $TypeLadrillo->delete();
+        return redirect()->route('tipoLadrillos.index');
     }
 }

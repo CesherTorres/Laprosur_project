@@ -13,7 +13,8 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        return view('empresas.index');
+        $empresaT= EmpresaT::all();
+        return view('empresas.index',compact('empresaT'));
     }
 
     /**
@@ -39,7 +40,7 @@ class EmpresaController extends Controller
         $empresaT->Ruc = $request->input('ruc');
         $empresaT->save();
 
-        return 'actualizado';
+        return redirect('/empresas');
     }
 
     /**
@@ -61,7 +62,8 @@ class EmpresaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $empresaT = EmpresaT::find($id);
+        return view('empresas.transporteEdit', compact('empresaT'));
     }
 
     /**
@@ -73,7 +75,13 @@ class EmpresaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $empresaT = EmpresaT::find($id);
+        $empresaT->update([
+            'businessName' => request('ntranporte'),
+            'Ruc' => request('ruc'),
+           ]);
+        $empresaT->save();
+        return redirect()->route('empresas.index');
     }
 
     /**
@@ -84,6 +92,8 @@ class EmpresaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $empresaT = EmpresaT::find($id);
+        $empresaT->delete();
+        return redirect()->route('empresas.index');
     }
 }

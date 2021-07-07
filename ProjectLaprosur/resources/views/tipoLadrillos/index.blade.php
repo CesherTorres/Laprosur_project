@@ -1,5 +1,4 @@
-@include('layouts.header')
-@extends('layouts.plantilla')
+@extends('layouts.header')
 @section('title', 'Index')
 @section('content')
 
@@ -9,13 +8,14 @@
             <hr width=90% align="center" style="background-color: black">
             <br>
             <div class="col-8">
-                <form action="">
+                <form method="POST" action="/tipoLadrillos">
+                @csrf
                     <div class="form-group row">
                         <br>
                         <div class="form-group col-12">
                             <label for="" class="control-label col-3">TIPO DE LADRILLOS :</label>
 
-                            <input type="text" name="" id="" placeholder="Tipo de Ladrillo" class="col-8">
+                            <input type="text" name="TypeLadrillo" id="" placeholder="Tipo de Ladrillo" class="col-8">
                             <br>
                             "Esto solo es una sugerencia de que tipo de ladrilleros deben de ir"
                             <select class="custom-select col-8" id="tipoLadrillo" name="tipoLadrillo">
@@ -30,15 +30,50 @@
                                 <option value="TECHO 08 X 30 X 30">TECHO 08 X 30 X 30</option>
                                 <option value="PANDERETA ACANALADA">PANDERETA ACANALADA</option>
                             </select>
+                            <br>
+                            <br>
                             <div align="center">
-                                <button type="button" class="btn btn-primary">REGISTRAR</button>
-                                <button type="button" class="btn btn-primary">CANCELAR</button>
+                                <button type="submit" class="btn btn-primary">REGISTRAR</button>
                             </div>
                         </div>
 
                         <br>
+                    </div>
                 </form>
             </div>
+
+                <table id="tcategory" class="table table-striped table-bordered display nowrap" cellspacing="0" style="width:100%">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th>Id</th>
+                                <th>Tipo de Ladrillo</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            @foreach($TypeLadrillo as $TypeLadrillos)
+                            <tr>
+                                    <td>{{$TypeLadrillos->id}}</td>
+                                    <td>{{$TypeLadrillos->name}}</td>
+                                    <td>
+                                        <form method="POST" action="{{ route('tipoLadrillos.destroy',$TypeLadrillos->id) }}" class="form-delete">
+                                            @csrf
+                                            @method('DELETE')
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editLadrillosT{{$TypeLadrillos->id}}"><i class="fas fa-user-edit"></i></button>
+                                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                            </div>
+                                            
+                                        </form>
+                                        @include('tipoladrillos.EditModal')
+                                    </td>    
+                            </tr>
+                            @endforeach
+                        </tbody>
+                        
+                    </table>
+
         </div>
     </div>
 @endsection
