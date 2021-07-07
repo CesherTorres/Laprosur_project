@@ -1,5 +1,5 @@
-@include('layouts.header')
-@extends('layouts.plantilla')
+@extends('layouts.header')
+{{-- @extends('layouts.plantilla') --}}
 @section('title', 'Index')
 @section('content')
 
