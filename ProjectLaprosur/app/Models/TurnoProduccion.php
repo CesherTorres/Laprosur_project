@@ -10,4 +10,9 @@ class TurnoProduccion extends Model
     use HasFactory;
     protected $table= 'production_shifs';
     protected $fillable=['nameShift','startTime','endTime'];
+
+    public function produccionCrudo()
+    {
+        return $this->belongsTo('App\Models\ProduccionCrudo');
+    }
 }

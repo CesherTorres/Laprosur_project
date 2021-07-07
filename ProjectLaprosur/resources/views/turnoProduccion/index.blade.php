@@ -49,26 +49,26 @@
             </thead>
 
             <tbody>
-
+                @foreach($turnoP as $turnoPs)
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$turnoPs->id}}</td>
+                    <td>{{$turnoPs->nameShift}}</td>
+                    <td>{{$turnoPs->startTime}}</td>
+                    <td>{{$turnoPs->endTime}}</td>
                     <td>
-                        <form method="POST" action="" class="form-delete">
-
+                        <form method="POST" action="{{ route('turnoProduccion.destroy',$turnoPs->id) }}" class="form-delete">
+                            @csrf
+                            @method('DELETE')
                             <div class="text-center">
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target=""><i
-                                        class="fas fa-user-edit"></i></button>
-                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editTurnoP{{$turnoPs->id}}"><i class="fas fa-user-edit"></i></button>
+                                <button type="submit" class="btn btn-danger" onclick="EliminarRegsitro()"><i class="fas fa-trash-alt"></i></button>
                             </div>
 
                         </form>
-
+                        @include('turnoProduccion.EditTurnoP')
                     </td>
-                </tr>
-
+                </tr>              
+                @endforeach
             </tbody>
 
         </table>

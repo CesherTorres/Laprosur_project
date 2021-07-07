@@ -8,7 +8,7 @@
                 </div>
                 <div class="modal-body">
                     <form class="form-group" method="POST" action="/almacenCrudo/{{$almacenCs->id}}">
-                        @method('PUT')
+                        @method('put')
                         @csrf
 
                         <div class="form-group">

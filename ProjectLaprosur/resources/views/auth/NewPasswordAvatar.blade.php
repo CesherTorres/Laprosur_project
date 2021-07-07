@@ -31,7 +31,7 @@
                             </div>
 
                             <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Actualizar contraseña</button>   
+                            <button type="submit" class="btn btn-primary" onclick="CambioContraseña()">Actualizar contraseña</button>   
                            
                         </div>
                             

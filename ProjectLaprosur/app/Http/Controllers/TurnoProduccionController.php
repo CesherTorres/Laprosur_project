@@ -65,7 +65,8 @@ class TurnoProduccionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $turnoP = TurnoProduccion::find($id);
+        return view('turnoProduccion.EditTurnoP', compact('turnoP'));
     }
 
     /**
@@ -77,7 +78,14 @@ class TurnoProduccionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $turnoP = TurnoProduccion::find($id);
+        $turnoP->update([
+            'nameShift' => request('TurnoP'),
+            'startTime' => request('startimeP'),
+            'endTime' => request('EndTimeP'),
+           ]);
+        $turnoP->save();
+        return redirect()->route('turnoProduccion.index');
     }
 
     /**
@@ -88,6 +96,8 @@ class TurnoProduccionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $turnoP = TurnoProduccion::find($id);
+        $turnoP->delete();
+        return redirect()->route('turnoProduccion.index');
     }
 }

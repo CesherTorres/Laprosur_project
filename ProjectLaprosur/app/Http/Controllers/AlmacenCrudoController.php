@@ -78,7 +78,7 @@ class AlmacenCrudoController extends Controller
         $almacenC = AlmacenCrudo::find($id);
         $almacenC->update([
             'name' => request('nombreC'),
-            'Location' => request('UbicacionC'),
+            'location' => request('UbicacionC'),
            ]);
         $almacenC->save();
         return redirect()->route('almacenCrudo.index');
@@ -92,6 +92,8 @@ class AlmacenCrudoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $almacenC = AlmacenCrudo::find($id);
+        $almacenC->delete();
+        return redirect()->route('almacenCrudo.index');
     }
 }
