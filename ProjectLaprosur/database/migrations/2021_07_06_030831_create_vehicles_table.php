@@ -12,7 +12,7 @@ class CreateVehiclesTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {  //Vehiculos
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
             $table->string('placa',7);

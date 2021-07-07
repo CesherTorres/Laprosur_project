@@ -12,7 +12,7 @@ class CreateCachamadasTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {  //Cachamadas
         Schema::create('cachamadas', function (Blueprint $table) {
             $table->id();
             $table->integer('cachamadas');

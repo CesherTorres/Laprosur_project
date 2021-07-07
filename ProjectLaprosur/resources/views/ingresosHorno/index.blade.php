@@ -5,7 +5,7 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <h1 align="center">REGISTRO DE PRODUCCION CRUDO DIARIO</h1>
+            <h1 align="center">REGISTRO DE INGRESO DE LADRILLOS AL HORNO</h1>
             <hr width=90% align="center" style="background-color: black">
             <br>
             <div class="col-8">
@@ -15,15 +15,22 @@
                             <div class="row justify-content-md-center">
 
                                 <div class="form-group col-12">
-                                    <label for="" class="control-label col-3">CORTES DE MAQUINA:</label>
-                                    <input type="text" name="" id="" placeholder="Número de corte total" class="col-8">
+                                    <label for="" class="control-label col-3">PLACA DEL VEHICULO:</label>
+                                    <input type="text" name="" id="" placeholder="Placa" class="col-8">
                                 </div>
 
                                 <div class="form-group col-12">
-                                    <label for="" class="control-label col-3">TIEMPO DE PARA:</label>
-                                    <input type="time" name="" id="" class="col-3">
-                                </div>
+                                    <label for="" class="control-label col-3">EMPRESA TRANSPORTISTA:</label>
+                                    <select class="custom-select col-6" id="horno">
 
+                                        <option selected>Escoja la Empresa</option>
+                                        <option value="">CHINO E.I.R.L</option>
+                                        <option value="">ALEXANDER E.I.R.L</option>
+                                        <option value="">JOSETH E.I.R.L</option>
+                                    </select>
+                                </div>
+                                <hr size="2px" width="100%" noshade="noshade" align="right" />
+                                
                                 <div class="form-group col-12">
                                     <label for="" class="control-label col-3">HOROMETRO :</label>
                                     <input type="text" name="" id="" class="col-8"
@@ -70,4 +77,4 @@
                 </form>
                 {{-- Aqui termina --}}
 
-@endsection
+            @endsection

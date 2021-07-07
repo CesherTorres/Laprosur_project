@@ -13,6 +13,7 @@ class CreateProductionShifsTable extends Migration
      */
     public function up()
     {
+        //Turnos de Produccion
         Schema::create('production_shifs', function (Blueprint $table) {
             $table->id();
             $table->string('nameShift',40);

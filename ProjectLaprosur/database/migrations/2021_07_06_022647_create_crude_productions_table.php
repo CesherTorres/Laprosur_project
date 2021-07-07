@@ -12,7 +12,7 @@ class CreateCrudeProductionsTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {   //Produccion Crudo
         Schema::create('crude_productions', function (Blueprint $table) {
             $table->id();
             $table->integer('machineCuts');

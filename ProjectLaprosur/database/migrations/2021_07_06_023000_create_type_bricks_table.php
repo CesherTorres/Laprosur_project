@@ -13,6 +13,7 @@ class CreateTypeBricksTable extends Migration
      */
     public function up()
     {
+        //Tipo de Ladrillos
         Schema::create('type_bricks', function (Blueprint $table) {
             $table->id();
             $table->string('name',60);

@@ -12,7 +12,7 @@ class CreateCarriersTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {   //Empresas Transportistas
         Schema::create('carriers', function (Blueprint $table) {
             $table->id();
             $table->string('businessName',50);

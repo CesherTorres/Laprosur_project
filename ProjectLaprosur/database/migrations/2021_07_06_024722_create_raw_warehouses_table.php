@@ -12,7 +12,7 @@ class CreateRawWarehousesTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {   //Almacen Crudo
         Schema::create('raw_warehouses', function (Blueprint $table) {
             $table->id();
             $table->string('name',50);
