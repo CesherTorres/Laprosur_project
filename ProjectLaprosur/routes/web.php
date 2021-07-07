@@ -31,5 +31,3 @@ Route::resource('Quema', AvanceQuemaController::class);
 Route::resource('Saca', SacaLadrilloController::class);
 Route::resource('Control', ControlladrilloController::class);
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
