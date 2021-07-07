@@ -10,6 +10,7 @@
     <title>MegaProductos - @yield('title')</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../css/font-awesome.min.css">
@@ -363,7 +364,7 @@
     <!-- jQuery -->
     <script src="/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
-    <script src=/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)
@@ -376,6 +377,10 @@
     <script src="/js/app.js"></script>
     <!-- Sparkline -->
     <script src="/plugins/sparklines/sparkline.js"></script>
+    <!--swalert2-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="/js/pluginSwwet.js"></script>
     <!-- JQVMap -->
     <script src="/plugins/jqvmap/jquery.vmap.min.js"></script>
     <script src="/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>

@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     /**
@@ -26,9 +26,9 @@ class UserController extends Controller
         $user->fill([
             'password' => Hash::make($request->confirnpasw)
           ])->save();
-        return redirect('/home')->with('updatepass', 'ok');
+            return redirect('/home');
         }else{
-            return redirect('/home')->with('error', 'over');
+            return redirect('/home');
         }
         //$user->password = $request->input('newpasW');
         //$user->save();

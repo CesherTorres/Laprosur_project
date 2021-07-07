@@ -14,6 +14,7 @@ use App\Http\Controllers\IngresosHornoController;
 use App\Http\Controllers\TipoLadrilloController;
 use App\Http\Controllers\TurnoProduccionController;
 use App\Http\Controllers\TurnoQuemaController;
+use App\Http\Controllers\UserController;
 use App\Models\ProduccionCrudo;
 use Illuminate\Support\Facades\Auth;
 
@@ -46,5 +47,8 @@ Route::resource('turnoQuema', TurnoQuemaController::class);
 Route::resource('cachamadas', CachamadaController::class);
 Route::resource('ingresosHorno', IngresosHornoController::class);
 Auth::routes();
+
+Route::get('/user/password/{id}', [UserController::class,'Password']);
+Route::post('/user/Updatepassword/{id}', [UserController::class,'updatepassword']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

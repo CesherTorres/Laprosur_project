@@ -25,7 +25,7 @@
                         </div>
 
                                 <div align="center">
-                                    <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                                    <button type="submit" class="btn btn-primary" onclick="swall()">REGISTRAR</button>
                                     <button type="submit" class="btn btn-danger">ELIMINAR</button>
                                 </div>
 
@@ -75,7 +75,7 @@
                                             @method('DELETE')
                                             <div class="text-center">
                                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editTransporte{{$empresaTs->id}}"><i class="fas fa-user-edit"></i></button>
-                                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                                <button type="submit" class="btn btn-danger" onclick="EliminarRegsitro()"><i class="fas fa-trash-alt"></i></button>
                                             </div>
                                             
                                         </form>

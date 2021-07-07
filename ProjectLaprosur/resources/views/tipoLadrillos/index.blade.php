@@ -33,7 +33,7 @@
                             <br>
                             <br>
                             <div align="center">
-                                <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                                <button type="submit" onclick="swall()" class="btn btn-primary">REGISTRAR</button>
                             </div>
                         </div>
 
@@ -62,7 +62,7 @@
                                             @method('DELETE')
                                             <div class="text-center">
                                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editLadrillosT{{$TypeLadrillos->id}}"><i class="fas fa-user-edit"></i></button>
-                                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                                <button type="submit" class="btn btn-danger" onclick="EliminarRegsitro()"><i class="fas fa-trash-alt"></i></button>
                                             </div>
                                             
                                         </form>
@@ -73,7 +73,8 @@
                         </tbody>
                         
                     </table>
-
+                
         </div>
     </div>
+
 @endsection
