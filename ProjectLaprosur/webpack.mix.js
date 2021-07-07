@@ -12,16 +12,16 @@ const mix = require('laravel-mix');
  */
 
  mix.styles([
-        'resources/plantilla/css/font-awesome.min.css',
-        'resources/plantilla/css/simple-line-icons.min.css',
-        'resources/plantilla/css/style.css',
+        'resources/plantillaLogin/css/font-awesome.min.css',
+        'resources/plantillaLogin/css/simple-line-icons.min.css',
+        'resources/plantillaLogin/css/style.css'
     ], 'public/css/plantilla.css')
 
 .scripts([
-    'resources/plantilla/css/bootstrap.min.css',
-    'resources/plantilla/css/Chart.min.css',
-    'resources/plantilla/css/jquery.min.css',
-    'resources/plantilla/css/pace.min.css',
-    'resources/plantilla/css/popper.min.css',
-    'resources/plantilla/css/template.css',
- ], 'public/css/plantilla.js');
+    'resources/plantillaLogin/js/bootstrap.min.js',
+    'resources/plantillaLogin/js/Chart.min.js',
+    'resources/plantillaLogin/js/jquery.min.js',
+    'resources/plantillaLogin/js/pace.min.js',
+    'resources/plantillaLogin/js/popper.min.js',
+    'resources/plantillaLogin/js/template.js'
+ ], 'public/js/plantilla.js');

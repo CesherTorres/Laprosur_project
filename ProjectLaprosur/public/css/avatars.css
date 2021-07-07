@@ -1,0 +1,54 @@
+#AvatarB{
+    border-color: darkblue; 
+}
+#ids {
+    width:23%;
+    z-index: 1030;
+    position:fixed;
+    bottom:0px;
+    right:50px;
+    margin-bottom:170px;
+    
+}
+#idsC {
+    width:23%;
+    z-index: 1040;
+    bottom:0px;
+    right:50px;
+    margin-bottom:170px;
+    
+}
+#ConF{
+    height:115%;
+    margin-bottom:10px;
+}
+#formsL {
+    text-align:center;
+}
+
+#footer{
+    text-align:center;
+}
+#MayusL{
+    text-transform: uppercase;
+}
+i#avatarC{
+    position:absolute;
+    color: coral;
+    font-size: xx-large;
+    z-index: 0;
+    left:190px;
+    margin-top:-110px;
+    
+}
+
+#FileA{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+}
