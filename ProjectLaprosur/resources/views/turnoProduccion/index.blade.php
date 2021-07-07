@@ -9,24 +9,25 @@
             <hr width=90% align="center" style="background-color: black">
             <br>
             <div class="col-8">
-                <form action="">
+                <form method="POST" action="/turnoProduccion">
+                @csrf
                     <div class="form-group row">
                         <br>
                         <div class="form-group col-12">
                             <label for="" class="control-label col-3">TURNO :</label>
 
-                            <input type="text" name="" id="" placeholder="MAÑANA - TARDE " class="col-8">
+                            <input type="text" name="TurnosPro" id="" placeholder="MAÑANA - TARDE " class="col-8">
                             <br>
                             <label for="" class="control-label col-3">HORA DE COMIENZO :</label>
 
-                            <input type="time" name="" id="" class="col-3">
+                            <input type="time" name="Hcomienzo" id="" class="col-3">
                             <br>
                             <label for="" class="control-label col-3">HORA DE TERMINO :</label>
 
-                            <input type="time" name="" id="" class="col-3">
+                            <input type="time" name="Htermino" id="" class="col-3">
                             <br>
                             <div align="center">
-                                <button type="button" class="btn btn-primary">REGISTRAR</button>
+                                <button type="submit" class="btn btn-primary" onclick="swall()">REGISTRAR</button>
                                 <button type="button" class="btn btn-primary">CANCELAR</button>
                             </div>
                         </div>

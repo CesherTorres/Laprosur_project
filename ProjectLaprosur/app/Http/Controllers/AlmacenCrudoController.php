@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\AlmacenCrudo;
 use Illuminate\Http\Request;
 
 class AlmacenCrudoController extends Controller
@@ -13,7 +13,8 @@ class AlmacenCrudoController extends Controller
      */
     public function index()
     {
-        return view('almacenCrudo.index');
+        $almacenC = AlmacenCrudo::all();
+        return view('almacenCrudo.index',compact('almacenC'));
     }
 
     /**
@@ -34,7 +35,12 @@ class AlmacenCrudoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $almacenC = new AlmacenCrudo();
+        $almacenC->name = $request->input('nombreC');
+        $almacenC->location = $request->input('UbicacionC');
+        $almacenC->save();
+
+        return redirect('/almacenCrudo');
     }
 
     /**
@@ -56,7 +62,8 @@ class AlmacenCrudoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $almacenC = AlmacenCrudo::find($id);
+        return view('almacenCrudo.EditCrudo', compact('almacenC'));
     }
 
     /**
@@ -68,7 +75,13 @@ class AlmacenCrudoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $almacenC = AlmacenCrudo::find($id);
+        $almacenC->update([
+            'name' => request('nombreC'),
+            'Location' => request('UbicacionC'),
+           ]);
+        $almacenC->save();
+        return redirect()->route('almacenCrudo.index');
     }
 
     /**

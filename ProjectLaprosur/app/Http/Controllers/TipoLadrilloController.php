@@ -39,7 +39,7 @@ class TipoLadrilloController extends Controller
         $TypeLadrillo->name = $request->input('TypeLadrillo');
         $TypeLadrillo->save();
 
-        return redirect('/tipoLadrillos')->with('addmarca', 'ok');;
+        return redirect('/tipoLadrillos');
     }
 
     /**

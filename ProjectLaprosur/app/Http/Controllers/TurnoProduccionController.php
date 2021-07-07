@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\TurnoProduccion;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class TurnoProduccionController extends Controller
 {
@@ -13,7 +14,8 @@ class TurnoProduccionController extends Controller
      */
     public function index()
     {
-        return view('turnoProduccion.index');
+        $turnoP = TurnoProduccion::all();
+        return view('turnoProduccion.index', compact('turnoP'));
     }
 
     /**
@@ -34,7 +36,13 @@ class TurnoProduccionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $turnoP = new TurnoProduccion();
+        $turnoP->nameShift = $request->input('TurnosPro');
+        $turnoP->startTime = $request->input('Hcomienzo');
+        $turnoP->endTime = $request->input('Htermino');
+        $turnoP->save();
+
+        return redirect('/turnoProduccion');
     }
 
     /**
