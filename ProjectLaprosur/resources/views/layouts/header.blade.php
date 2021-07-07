@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/jpg" href="/img/almacen.png">
-    <title>MegaProductos - @yield('title')</title>
+    <title>Laprosur S.A.C - @yield('title')</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -138,7 +138,7 @@
                                 </a>
                             </li>
 
-                            <!--Inventario-->
+                            <!--Ladrillos-->
                             <li class="nav-item has-treeview">
                                     <a href="#" class="nav-link">
                                         <i class="nav-icon fas fa-door-open"></i>
@@ -152,41 +152,49 @@
                                         <li class="nav-item">
                                             <a href="{{ url('/tipoLadrillos') }}" class="nav-link">
                                                 <i class="fa fa-circle-o nav-icon"></i>
-                                                <p>Tipo de Ladrillo</p>
+                                                <p>Tipos de Ladrillos</p>
                                             </a>
                                         </li>
 
                                     </ul>
                             </li>
+                            {{-- Cierre Ladrillos --}}
+
+                            {{-- Produccion crudo --}}
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fa fa-industry"></i>
                                     <p>
-                                        PRODUCCION COCIDO
+                                        PRODUCCION CRUDO
                                         <i class="right fa fa-angle-left"></i>
                                     </p>
                                 </a>
+
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="{{ url('/categoria') }}" class="nav-link">
+
+                                        <a href="{{ url('/produccionCrudos') }}" class="nav-link">
                                             <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Categorias</p>
+                                            <p>Produccion</p>
                                         </a>
                                     </li>
+
                                     <li class="nav-item">
-                                        <a href="{{ url('/marca') }}" class="nav-link">
+                                        <a href="{{ url('/almacenCrudo') }}" class="nav-link">
                                             <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Marcas</p>
+                                            <p>Almacenes</p>
                                         </a>
                                     </li>
+
                                     <li class="nav-item">
-                                        <a href="{{ url('/productos') }}" class="nav-link">
+                                        <a href="{{ url('/turnoProduccion') }}" class="nav-link">
                                             <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Productos</p>
+                                            <p>Turnos</p>
                                         </a>
-                                    </li>
+                                    </li>                                    
                                 </ul>
                             </li>
+                            {{-- cierre de produccion crudo --}}
 
                             <!--Gerencia-->
                             <li class="nav-item has-treeview">
@@ -345,7 +353,7 @@
     </div>
     <footer class="main-footer">
         <strong>Copyright &copy; 2021 <a href="http://www.cuanticagroup.com/" target="blank"
-                class="text-decoration-none">CuanticaGroupOficial</a>.</strong>
+                class="text-decoration-none">Ladrillera Progreso del Sur S.A.C</a>.</strong>
         Todos los derechos reservados
         <div class="float-right d-none d-sm-inline-block">
             <b>Version</b> 1.0.1
