@@ -2,7 +2,7 @@
 <html>
 
 <head>
-     
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -10,7 +10,7 @@
     <title>Laprosur S.A.C - @yield('title')</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../css/font-awesome.min.css">
@@ -81,7 +81,7 @@
                                     data-bs-target="#editsC">Actualizar contraseña</a>
 
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
+                                                                 document.getElementById('logout-form').submit();">
                                     {{ __('Cerrar Sesion') }} <i class="fas fa-sign-out-alt"></i>
                                 </a>
 
@@ -141,23 +141,23 @@
 
                             <!--Ladrillos-->
                             <li class="nav-item has-treeview">
-                                    <a href="#" class="nav-link">
-                                        <i class="nav-icon fas fa-door-open"></i>
-                                        <p>
-                                            MATERIALES
-                                            <i class="fa fa-angle-left right"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-door-open"></i>
+                                    <p>
+                                        MATERIALES
+                                        <i class="fa fa-angle-left right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
 
-                                        <li class="nav-item">
-                                            <a href="{{ url('/tipoLadrillos') }}" class="nav-link">
-                                                <i class="fa fa-circle-o nav-icon"></i>
-                                                <p>Tipos de Ladrillos</p>
-                                            </a>
-                                        </li>
+                                    <li class="nav-item">
+                                        <a href="{{ url('/tipoLadrillos') }}" class="nav-link">
+                                            <i class="fa fa-circle-o nav-icon"></i>
+                                            <p>Tipos de Ladrillos</p>
+                                        </a>
+                                    </li>
 
-                                    </ul>
+                                </ul>
                             </li>
                             {{-- Cierre Ladrillos --}}
 
@@ -192,102 +192,40 @@
                                             <i class="fa fa-circle-o nav-icon"></i>
                                             <p>Turnos</p>
                                         </a>
-                                    </li>                                    
+                                    </li>
                                 </ul>
                             </li>
                             {{-- cierre de produccion crudo --}}
-
-                            <!--Gerencia-->
+                            {{-- Produccion Cocido --}}
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
-                                    <i class="nav-icon fa fa-users"></i>
-                                    <p>PRODUCCION CRUDO
+                                    <i class="nav-icon fas fa-door-open"></i>
+                                    <p>
+                                        PRODUCCION COCIDO
                                         <i class="fa fa-angle-left right"></i>
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
+
                                     <li class="nav-item">
-                                        <a href="{{ url('/empleados') }}" class="nav-link">
+                                        <a href="{{ url('/produccionCocidos') }}" class="nav-link">
                                             <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Empleados</p>
+                                            <p>Produccion</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="{{ url('/proveedores') }}" class="nav-link">
-                                            <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Proveedores</p>
-                                        </a>
-                                    </li>
+
                                 </ul>
+
                             </li>
+                            {{-- cierre produccion cocido --}}
+
 
                             <!--Compras-->
-                            <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <p>SACA DE LADRILLO
-                                        <i class="fa fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="{{ url('/compras/create') }}" class="nav-link">
-                                            <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Nueva compra</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ url('/compras') }}" class="nav-link">
-                                            <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Gestor de compras</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                            <!--Reportes-->
-                            <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-door-open"></i>
-                                    <p>
-                                        QUEMA LADRILLO
-                                        <i class="fa fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-
-                                    <li class="nav-item">
-                                        <a href="{{ url('/salidas') }}" class="nav-link">
-                                            <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Gestor de salidas</p>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </li>
 
 
 
-                            <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-door-open"></i>
-                                    <p>
-                                        CONTROL LADRILLO
-                                        <i class="fa fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
 
-                                    <li class="nav-item">
-                                        <a href="{{ url('/salidas') }}" class="nav-link">
-                                            <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Gestor de salidas</p>
-                                        </a>
-                                    </li>
 
-                                </ul>
-                            </li>
                             <!--Empresas-->
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
@@ -307,28 +245,12 @@
                                     </li>
 
                                 </ul>
-                                <ul class="nav nav-treeview">
 
-                                    <li class="nav-item">
-                                        <a href="{{ url('/salidas') }}" class="nav-link">
-                                            <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Empresas</p>
-                                        </a>
-                                    </li>
-
-                                </ul>
                             </li>
-                            {{-- Cierra empresa --}}
+                            <!-- Cierre Empresas-->
 
-                            <!--Kardex-->
-                            <!--<li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="nav-icon fa fa-clipboard-check"></i>
-                                            <p>
-                                                Kardex
-                                            </p>
-                                        </a>
-                                    </li>-->
+
+
                         </ul>
                     </nav>
                     <!-- /.sidebar-menu -->
@@ -342,7 +264,7 @@
                 <div class="content-header">
 
                     <div class="container col-12">
-                        
+
                         @yield('content')
                     </div>
 
@@ -444,7 +366,7 @@
             </script>
         @endif
     @endsection
-    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>
