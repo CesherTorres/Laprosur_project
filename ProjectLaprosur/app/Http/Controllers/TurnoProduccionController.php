@@ -35,11 +35,12 @@ class TurnoProduccionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
         $turnoP = new TurnoProduccion();
+        
         $turnoP->nameShift = $request->input('TurnosPro');
-        $turnoP->startTime = $request->input('Hcomienzo');
-        $turnoP->endTime = $request->input('Htermino');
+        $turnoP->startTime = Carbon::parse($request->input('Hcomienzo'));
+        $turnoP->endTime = Carbon::parse($request->input('Htermino'));
         $turnoP->save();
 
         return redirect('/turnoProduccion');
