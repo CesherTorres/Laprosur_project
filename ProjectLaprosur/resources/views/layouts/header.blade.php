@@ -19,7 +19,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars text-white"></i>
             </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex flex-row-reverse collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
                     <li class="nav-item active">

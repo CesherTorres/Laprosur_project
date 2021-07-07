@@ -17,7 +17,7 @@ class CreateDispatchsTable extends Migration
             $table->id();
             $table->double('quantity');
             $table->unsignedBigInteger('id_typeBrick');
-            $table->foreign('id_typeBrick')->on('type_bricks')->references('id')->onDelete('cascade')->onupdate('cascade');
+            $table->foreign('id_typeBrick')->references('id')->on('type_bricks')->onDelete('cascade')->onupdate('cascade');
             $table->timestamps();
         });
     }

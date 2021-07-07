@@ -19,8 +19,8 @@ class CreateVehiclesTable extends Migration
             $table->string('nameDriver');
             $table->unsignedBigInteger('id_carrier');
             $table->unsignedBigInteger('id_dispatch');
-            $table->foreign('id_carrier')->on('carriers')->references('id')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_dispatch')->on('dispatchs')->references('id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_carrier')->references('id')->on('carriers')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_dispatch')->references('id')->on('dispatchs')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

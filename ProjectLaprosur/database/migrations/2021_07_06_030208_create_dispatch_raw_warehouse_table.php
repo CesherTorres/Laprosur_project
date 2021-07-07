@@ -17,8 +17,8 @@ class CreateDispatchRawWarehouseTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_rawWarehouse');
             $table->unsignedBigInteger('id_dispatch');
-            $table->foreign('id_rawWarehouse')->on('raw_warehouses')->references('id')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_dispatch')->on('dispatchs')->references('id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_rawWarehouse')->references('id')->on('raw_warehouses')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_dispatch')->references('id')->on('dispatchs')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

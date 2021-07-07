@@ -21,8 +21,8 @@ class CreateCrudeProductionsTable extends Migration
             $table->integer('amountOfPeoples');
             $table->integer('productionQuantity');
             $table->date('date');
-            $table->unsignedBigInteger('id_producitionShift');
-            $table->foreign('id_producitionShift')->on('production_shifts')->references('id')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('id_productionShift');
+            $table->foreign('id_productionShift')->references('id')->on('production_shifs')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

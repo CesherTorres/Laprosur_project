@@ -21,9 +21,9 @@ class CreateOvensTable extends Migration
             $table->unsignedBigInteger('id_dispatch');
             $table->unsignedBigInteger('id_burning');
             $table->unsignedBigInteger('id_cachamada');
-            $table->foreing('id_dispatch')->on('dispatchs')->references('id')->onDelete()->onUpdate();
-            $table->foreing('id_burning')->on('burnings')->references('id')->onDelete()->onUpdate();
-            $table->foreing('id_cachamada')->on('cachamadas')->references('id')->onDelete()->onUpdate();
+            $table->foreign('id_dispatch')->references('id')->on('dispatchs')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_burning')->references('id')->on('burnings')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_cachamada')->references('id')->on('cachamadas')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

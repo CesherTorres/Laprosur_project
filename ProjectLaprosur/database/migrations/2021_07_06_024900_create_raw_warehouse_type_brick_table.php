@@ -17,8 +17,8 @@ class CreateRawWarehouseTypeBrickTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_typeBrick');
             $table->unsignedBigInteger('id_rawWarehouse');
-            $table->foreign('id_typeBrick')->on('type_bricks')->references('id')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_rawWarehouse')->on('raw_warehouses')->references('id')->onDelete('cascade')->onupdate('cascade');
+            $table->foreign('id_typeBrick')->references('id')->on('type_bricks')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_rawWarehouse')->references('id')->on('raw_warehouses')->onDelete('cascade')->onupdate('cascade');
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ class CreateBurnShiftsTable extends Migration
     {
         Schema::create('burn_shifts', function (Blueprint $table) {
             $table->id();
-            $table->varchar('name',45);
+            $table->string('name',45);
             $table->dateTime('startTime');
             $table->dateTime('endTime');
             $table->timestamps();

@@ -17,8 +17,8 @@ class CreateCookedWarehouseSaleTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_cookedWarehouse');
             $table->unsignedBigInteger('id_sale');
-            $table->foreign('id_cookedWarehouse')->on('cooked_warehouse_sale')->references('id')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_sale')->on('sales')->references('id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_cookedWarehouse')->references('id')->on('cooked_warehouse_sale')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_sale')->references('id')->on('sales')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

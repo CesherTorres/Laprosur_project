@@ -17,8 +17,8 @@ class CreateCrudeProductionTypeBrickTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_crudeProduction');
             $table->unsignedBigInteger('id_typeBrick');
-            $table->foreign('id_crudeProduction')->on('crude_productions')->references('id')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_typeBrick')->on('type_bricks')->references('id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_crudeProduction')->references('id')->on('crude_productions')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_typeBrick')->references('id')->on('type_bricks')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

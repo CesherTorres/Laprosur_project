@@ -19,7 +19,7 @@ class CreateSacasTable extends Migration
             $table->string('driver',30);
             $table->string('helped',30);
             $table->unsignedBigInteger('id_oven');
-            $table->foreign('id_oven')->on('ovens')->references('id')->ondelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_oven')->references('id')->on('ovens')->ondelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

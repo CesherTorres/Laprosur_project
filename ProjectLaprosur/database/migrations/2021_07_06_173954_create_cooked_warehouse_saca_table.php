@@ -17,8 +17,8 @@ class CreateCookedWarehouseSacaTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_cookedWarehouse');
             $table->unsignedBigInteger('id_saca');
-            $table->foreign('id_cookedWarehouse')->on('cooked_warehouses')->references('id')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_saca')->on('sacas')->references('id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_cookedWarehouse')->references('id')->on('cooked_warehouses')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_saca')->references('id')->on('sacas')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

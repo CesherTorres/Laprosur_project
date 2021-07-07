@@ -21,8 +21,8 @@ class CreateBurningsTable extends Migration
             $table->dateTime('burningTime');
             $table->unsignedBigInteger('id_burnShift');
             $table->unsignedBigInteger('id_cachamada');
-            $table->foreign('id_burnShift')->on('burn_shifts')->references('id')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_cachamada')->on('cachamadas')->references('id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_burnShift')->references('id')->on('burn_shifts')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_cachamada')->references('id')->on('cachamadas')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
