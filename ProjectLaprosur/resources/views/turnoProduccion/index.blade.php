@@ -1,5 +1,5 @@
-@include('layouts.header')
-@extends('layouts.plantilla')
+@extends('layouts.header')
+
 @section('title', 'Index')
 @section('content')
 
@@ -16,7 +16,7 @@
                             <label for="" class="control-label col-3">TURNO :</label>
 
                             <input type="text" name="" id="" placeholder="MAÑANA - TARDE " class="col-8">
-                            <br>              
+                            <br>
                             <label for="" class="control-label col-3">HORA DE COMIENZO :</label>
 
                             <input type="time" name="" id="" class="col-3">
@@ -33,7 +33,43 @@
 
                         <br>
                 </form>
+
             </div>
         </div>
+        <table id="" class="table table-striped table-bordered display nowrap" cellspacing="0" style="width:100%">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>Id</th>
+                    <th>Turno</th>
+                    <th>H/Comienzo</th>
+                    <th>H/Termino</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <form method="POST" action="" class="form-delete">
+
+                            <div class="text-center">
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target=""><i
+                                        class="fas fa-user-edit"></i></button>
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+
+                        </form>
+
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
     </div>
 @endsection

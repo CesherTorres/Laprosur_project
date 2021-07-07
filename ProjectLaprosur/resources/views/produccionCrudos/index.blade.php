@@ -1,5 +1,5 @@
-@include('layouts.header')
-@extends('layouts.plantilla')
+@extends('layouts.header')
+{{-- @extends('layouts.plantilla') --}}
 @section('title', 'Index')
 @section('content')
 
@@ -68,6 +68,9 @@
                         </div>
                     </div>
                 </form>
-                {{-- Aqui termina --}}
+            </div>
+        </div>
+    </div>
+    {{-- Aqui termina --}}
 
 @endsection
